@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  overflow: hidden; /* no scrollbars — the canvas fills everything */
+}
+
+canvas {
+  display: block;
+}
+
+#ui {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  color: #88ccff;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 2.0;
+  user-select: none;
+  pointer-events: none; /* clicks pass through the UI to the canvas */
+}
+
+#ui strong {
+  color: #ffffff;
+}
