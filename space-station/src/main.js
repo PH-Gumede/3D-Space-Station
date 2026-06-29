@@ -1,3 +1,6 @@
+// Student Name: Philasande Ntandoyenkosi Gumede
+// Student No: 24660892
+
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import './style.css';
