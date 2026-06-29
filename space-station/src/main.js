@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import './style.css';
 
-// ─── Scene, Camera, Renderer ──────────────────────────────────────────────
+// Scene, Camera, Renderer ──────────────────────────────────────────────
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x000008);
@@ -31,7 +31,7 @@ controls.dampingFactor = 0.05;
 controls.minDistance = 15;       // can't zoom in past 15 units
 controls.maxDistance = 400;      // can't zoom out past 400 units
 
-// ─── Lighting ─────────────────────────────────────────────────────────────
+// Lighting ─────────────────────────────────────────────────────────────
 
 scene.add(new THREE.AmbientLight(0x223344, 0.8));
 
@@ -57,7 +57,7 @@ const starGeo = new THREE.BufferGeometry();
 starGeo.setAttribute('position', new THREE.Float32BufferAttribute(starVerts, 3));
 scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xffffff, size: 0.5 })));
 
-// ─── Shared materials ─────────────────────────────────────────────────────
+// Shared materials ─────────────────────────────────────────────────────
 
 const metalMat = new THREE.MeshPhongMaterial({ color: 0x8899aa, specular: 0x334455, shininess: 60 });
 const darkMat  = new THREE.MeshPhongMaterial({ color: 0x445566 });
@@ -154,7 +154,7 @@ const solarPanelGroups = [];
   stationGroup.add(tg);
 });
 
-// ─── Planet ───────────────────────────────────────────────────────────────
+// Planet ───────────────────────────────────────────────────────────────
 
 const planet = new THREE.Mesh(
   new THREE.SphereGeometry(45, 64, 64),
@@ -280,7 +280,7 @@ function handleMovement() {
   if (keys['e'])                        camera.position.y -= speed;
 }
 
-// ─── First-person docking view ────────────────────────────────────────────
+// First-person docking view ────────────────────────────────────────────
 //
 // When V is pressed, we smoothly orbit the camera close to the station
 // at docking-bay height and always point it at the hub.
@@ -302,7 +302,7 @@ function handleFirstPerson(t) {
   camera.lookAt(0, 0, 0); // always look at station centre
 }
 
-// ─── Resize ───────────────────────────────────────────────────────────────
+// Resize ───────────────────────────────────────────────────────────────
 
 window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight;
@@ -321,10 +321,10 @@ function animate() {
 
   const t = clock.getElapsedTime(); // seconds since start
 
-  // ── Station ──────────────────────────────────────────────────────────────
+  // Station ──────────────────────────────────────────────────────────────
   stationGroup.rotation.y = t * 0.05;
 
-  // ── Solar panels — each tilts at a slightly different rate ───────────────
+  // Solar panels — each tilts at a slightly different rate ───────────────
   solarPanelGroups.forEach((pg, i) => {
     pg.rotation.x = t * (0.15 + i * 0.03);
   });
