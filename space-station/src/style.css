@@ -25,6 +25,6 @@ canvas {
   pointer-events: none; /* clicks pass through the UI to the canvas */
 }
 
-#ui strong {
+#ui strong { 
   color: #ffffff;
 }
