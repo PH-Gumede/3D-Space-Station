@@ -21,16 +21,16 @@ This project renders an animated 3D space station — complete with docking modu
 
 ## Features
 
-- 🛰️ **Procedurally-built space station** — a central hub, six radially-arranged docking modules, four solar panel arrays, and two communication towers, all assembled from primitive geometries and grouped hierarchically.
-- 🚀 **Four animated spacecraft** — each on its own circular orbit with a unique radius, speed, and vertical bob, and correctly oriented to face its direction of travel.
-- 🌌 **8,000-point starfield** — a single efficient particle system rather than thousands of individual objects.
-- 🪐 **Background planet** — a large, subtly glowing sphere positioned far from the station for scale and atmosphere.
-- 🖱️ **Orbit camera controls** — drag to orbit, scroll to zoom, with smooth inertia/damping.
-- ⌨️ **Free-fly camera** — WASD/arrow-key movement plus Q/E for vertical movement, computed relative to the direction the camera is actually facing.
-- 📷 **First-person "docking view" mode** — toggle (**V**) into a smooth, automatically-orbiting close-up camera near the station.
-- ⏸️ **Pause/resume ship animation** — toggle (**P**) to freeze or resume the orbiting spacecraft.
-- 📟 **Live on-screen controls overlay** — updates in real time to reflect the current view mode and ship-animation state.
-- 📱 **Responsive canvas** — automatically resizes and adjusts the camera's aspect ratio on window resize.
+-  **Procedurally-built space station** — a central hub, six radially-arranged docking modules, four solar panel arrays, and two communication towers, all assembled from primitive geometries and grouped hierarchically.
+-  **Four animated spacecraft** — each on its own circular orbit with a unique radius, speed, and vertical bob, and correctly oriented to face its direction of travel.
+-  **8,000-point starfield** — a single efficient particle system rather than thousands of individual objects.
+-  **Background planet** — a large, subtly glowing sphere positioned far from the station for scale and atmosphere.
+-  **Orbit camera controls** — drag to orbit, scroll to zoom, with smooth inertia/damping.
+-  **Free-fly camera** — WASD/arrow-key movement plus Q/E for vertical movement, computed relative to the direction the camera is actually facing.
+-  **First-person "docking view" mode** — toggle (**V**) into a smooth, automatically-orbiting close-up camera near the station.
+-  **Pause/resume ship animation** — toggle (**P**) to freeze or resume the orbiting spacecraft.
+-  **Live on-screen controls overlay** — updates in real time to reflect the current view mode and ship-animation state.
+-  **Responsive canvas** — automatically resizes and adjusts the camera's aspect ratio on window resize.
 
 ## Screenshots / Demo
 
